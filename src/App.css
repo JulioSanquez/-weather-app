@@ -58,6 +58,7 @@ h1{
 
 .dark-theme{
     background-color: #111;
+    border: 1px solid #ccc;
     color: #ccc;
     cursor: pointer;
 
