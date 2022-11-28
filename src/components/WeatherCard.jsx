@@ -22,7 +22,7 @@ const WeatherCard = ({weather, temperature, isCelsius, changeUnitTemperature, ne
         <h3>{weather.name}, {weather.sys.country}</h3>
         <section className='weatherCard-body'>
             <div className='img'>
-                <img src={`http://localhost:5173/src/assets/${ clima ? clima.img : weather.weather[0].icon}.png`} alt="Clima" />
+                <img src={`/${ clima ? clima.img : weather.weather[0].icon}.png`} alt="Clima" />
             </div>
             <div>
               <ul>
