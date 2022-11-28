@@ -80,27 +80,29 @@ function App() {
   }, [coords])
 
   return (
-    <div className={ darkTheme && 'App'}>
-      <div className='dark-theme' onClick={() => setDarkTheme(!darkTheme)} >
-        <p> { darkTheme ? "Ligth" : "Dark"} </p>
-      </div>
+    <div className={ `${darkTheme && 'App'}`}>
       <div className="cambiar-clima">
-        <h2>Cambiar Clima</h2>
-        <select className='select-search' name="clima" onChange={handleChangeClima}>
-          <option value="d1"> Day - Clear Sky </option>
-          <option value="d2"> Day - Clouds </option>
-          <option value="d3"> Day - Rain </option>
-          <option value="d4"> Day - Thunderstorm </option>
-          <option value="d5"> Day - Snow </option>
-          <option value="d6"> Day - Mist </option>
-          <option value="n1"> Nigth - Clear Sky </option>
-          <option value="n2"> Nigth - Clouds </option>
-          <option value="n3"> Nigth - Rain </option>
-          <option value="n4"> Nigth - Thunderstorm </option>
-          <option value="n5"> Nigth - Snow </option>
-          <option value="n6"> Nigth - Mist </option>
-        </select>
-      </div>
+          <div>
+            <h2>Cambiar Clima</h2>
+            <select className='select-search' name="clima" onChange={handleChangeClima}>
+              <option value="d1"> Day - Clear Sky </option>
+              <option value="d2"> Day - Clouds </option>
+              <option value="d3"> Day - Rain </option>
+              <option value="d4"> Day - Thunderstorm </option>
+              <option value="d5"> Day - Snow </option>
+              <option value="d6"> Day - Mist </option>
+              <option value="n1"> Nigth - Clear Sky </option>
+              <option value="n2"> Nigth - Clouds </option>
+              <option value="n3"> Nigth - Rain </option>
+              <option value="n4"> Nigth - Thunderstorm </option>
+              <option value="n5"> Nigth - Snow </option>
+              <option value="n6"> Nigth - Mist </option>
+            </select>
+          </div>
+          <div className='dark-theme' onClick={() => setDarkTheme(!darkTheme)} >
+            <p> { darkTheme ? "Ligth" : "Dark"} </p>
+          </div>
+        </div>
       <div className="App2" style={weather&&{backgroundImage: `url(./${clima ? clima.img : weather.weather[0].icon}.webp)`}}>
         {weather 
           ? 
