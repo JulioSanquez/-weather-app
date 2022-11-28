@@ -84,7 +84,7 @@ h1{
 }
 
 .weatherCard-button:hover{
-    background-color: #00000022;
+    opacity: .6;
 }
 
 .weatherCard-body{
