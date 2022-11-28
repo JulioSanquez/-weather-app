@@ -150,6 +150,8 @@ h1{
 
 .weatherCard-button:hover{
     opacity: .6;
+    
+    transform: scale(1.2);
 }
 
 .weatherCard-body{
