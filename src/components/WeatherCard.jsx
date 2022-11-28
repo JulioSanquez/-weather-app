@@ -7,6 +7,15 @@ const WeatherCard = ({weather, temperature, isCelsius, changeUnitTemperature, ne
     setPlace(e.target.value)
   }
 
+  const handlePress = (e) => {
+    if(e.key !== 'Enter') return
+    
+    setPlace(e.target.value)
+    newCallAPISearch(place)
+  }
+
+  
+
   return (
     <article className='weatherCard' >
         <h1>Weather App</h1>
@@ -31,6 +40,7 @@ const WeatherCard = ({weather, temperature, isCelsius, changeUnitTemperature, ne
             type="text" 
             value={place}
             onChange={handleChangePlace}
+            onKeyDown={handlePress}
           />
           <button className='weatherCard-button' onClick={ () => newCallAPISearch(place)}>Search</button>
         </div>
