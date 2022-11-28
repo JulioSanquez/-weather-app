@@ -82,7 +82,7 @@ function App() {
     <>
       <div className="cambiar-clima">
         <h2>Cambiar Clima</h2>
-        <input type="search" onChange={handleChangeClima} />
+        <input className='input-search' type="search" onChange={handleChangeClima} placeholder="Ejemplo: d1-d6 ó n1-n6" />
       </div>
       <div className="App" style={weather&&{backgroundImage: `url(./${clima ? clima.img : weather.weather[0].icon}.webp)`}}>
         {weather 
