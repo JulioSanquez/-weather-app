@@ -37,12 +37,13 @@ const WeatherCard = ({weather, temperature, isCelsius, changeUnitTemperature, ne
         </section>
         <div>
           <input 
+            className='input-search'
             type="search" 
             value={place}
             onChange={handleChangePlace}
             onKeyDown={handlePress}
           />
-          <button className='weatherCard-button' onClick={ () => newCallAPISearch(place)}>Search</button>
+          <button className='weatherCard-button search--country' onClick={ () => newCallAPISearch(place)}>Search</button>
         </div>
     </article>
   )
