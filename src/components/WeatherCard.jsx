@@ -37,7 +37,7 @@ const WeatherCard = ({weather, temperature, isCelsius, changeUnitTemperature, ne
         </section>
         <div>
           <input 
-            type="text" 
+            type="search" 
             value={place}
             onChange={handleChangePlace}
             onKeyDown={handlePress}
